@@ -1,6 +1,15 @@
 import React, { useState } from "react";
 import data from "./cn_to_jp_word.json";
-import { Textarea, Button, Grid, Title, Container, Paper } from "@mantine/core";
+import {
+  Textarea,
+  Button,
+  Grid,
+  Title,
+  Container,
+  Paper,
+  Center,
+  Text,
+} from "@mantine/core";
 
 export default function App() {
   const [cn, setCn] = useState("");
@@ -27,7 +36,7 @@ export default function App() {
   return (
     <Container>
       <Title py={30} align='center'>
-        😉　中日汉字转换｜日中漢字変換　✌
+        😉　中日汉字转换｜日中漢字変換　🥳
       </Title>
       <Grid>
         <Grid.Col md={6}>
@@ -81,6 +90,12 @@ export default function App() {
           </Paper>
         </Grid.Col>
       </Grid>
+
+      <Center>
+        <Text className='sign' mt={30}>
+          Created By <a href='mailto:tyoukyou23@yahoo.co.jp'>@tyoukyou23</a>
+        </Text>
+      </Center>
     </Container>
   );
 }
